@@ -120,3 +120,5 @@ def execute_prompt_with_metrics(prompt_text: str):
         content = "*(No response generated for this input)*"
         
     return content, latency, total_tokens
+
+
