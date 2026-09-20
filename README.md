@@ -1,6 +1,6 @@
-# AI Guardian: Privacy-First Prompt Optimizer
+#  Privacy-First Prompt Optimizer & Executor
 
-A robust, Streamlit-based AI application that automatically upgrades user prompts into highly structured, expert-level instructions while strictly detecting and masking Personally Identifiable Information (PII) before it ever reaches the LLM. 
+A robust, Streamlit-based AI application that automatically upgrades user prompts into highly structured, expert-level instructions while strictly detecting and masking Personally Identifiable Information (PII) before it ever reaches the LLM.
 
 ## 🚀 Features
 
@@ -15,7 +15,7 @@ A robust, Streamlit-based AI application that automatically upgrades user prompt
 * **Frontend:** Streamlit
 * **NLP & Privacy:** Microsoft Presidio (`presidio-analyzer`, `presidio-anonymizer`), spaCy
 * **LLM Integration:** LangChain / LLM APIs (e.g., Groq)
-* **Core Language:** Python 
+* **Core Language:** Python
 
 ## 📂 Project Structure
 
@@ -27,12 +27,18 @@ A robust, Streamlit-based AI application that automatically upgrades user prompt
 ## ⚙️ Installation & Setup
 
 **1. Clone the repository**
+
 ```bash
-git clone [https://github.com/yourusername/ai-guardian.git](https://github.com/yourusername/ai-guardian.git)
+git clone [https://github.com/yourusername/ai-guardian.git](https://github.com/yourusername/ai-guardian)
 cd ai-guardian
-2. Create and activate a virtual environment
+
+```
+
+**2. Create and activate a virtual environment**
 
 Bash
+
+```
 # For Windows:
 python -m venv .venv
 .venv\Scripts\activate
@@ -40,36 +46,52 @@ python -m venv .venv
 # For Mac/Linux:
 python3 -m venv .venv
 source .venv/bin/activate
-3. Install dependencies
+
+```
+
+**3. Install dependencies**
 With the virtual environment activated, install the required packages and the spaCy language model:
 
 Bash
+
+```
 pip install streamlit presidio-analyzer presidio-anonymizer spacy langchain python-dotenv pydantic
 python -m spacy download en_core_web_lg
-4. Set up environment variables
-Create a .env file in the root directory and add your necessary API keys:
+
+```
+
+**4. Set up environment variables**
+Create a `.env` file in the root directory and add your necessary API keys:
 
 Code snippet
+
+```
 API_KEY=your_api_key_here
-5. Run the application
+
+```
+
+**5. Run the application**
 
 Bash
+
+```
 streamlit run app.py
-🧠 How it Works
-Input: The user submits a raw, unoptimized prompt.
 
-Sanitize: The mask_pii function scans for sensitive data (Emails, Passwords, etc.) and replaces them with safe [REDACTED] tags.
+```
 
-Optimize: The sanitized text is wrapped in a strict System Meta-Prompt, turning it into an expert-level request without asking the user for more information.
+## 🧠 How it Works
 
-Execute: The final, safe, and highly structured prompt is executed at temperature=0.0, returning a precise, professional, and template-free response.
+1. **Input:** The user submits a raw, unoptimized prompt.
+2. **Sanitize:** The `mask_pii` function scans for sensitive data (Emails, Passwords, etc.) and replaces them with safe `[REDACTED]` tags.
+3. **Optimize:** The sanitized text is wrapped in a strict System Meta-Prompt, turning it into an expert-level request *without* asking the user for more information.
+4. **Execute:** The final, safe, and highly structured prompt is executed at `temperature=0.0`, returning a precise, professional, and template-free response.
 
-🔮 Future Scope (v2.0)
-Regional PII Expansion: Integration of custom ML models or regional datasets to accurately detect non-Western identities (e.g., Indian name recognition), replacing the default spaCy limitations.
+## 🔮 Future Scope (v2.0)
 
-Expanded Masking: Adding support for financial data (Credit Cards, Bank Accounts) and physical addresses.
+* **Regional PII Expansion:** Integration of custom ML models or regional datasets to accurately detect non-Western identities (e.g., Indian name recognition), replacing the default spaCy limitations.
+* **Expanded Masking:** Adding support for financial data (Credit Cards, Bank Accounts) and physical addresses.
+* **Model Scaling:** Supporting additional LLM providers and localized deployment options.
 
-Model Scaling: Supporting additional LLM providers and localized deployment options.
+## 👤 Author
 
-👤 Author
-Aishwari Bambale
+**Aishwari Bambale**
