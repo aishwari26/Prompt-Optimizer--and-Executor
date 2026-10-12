@@ -6,3 +6,4 @@ presidio-anonymizer
 spacy
 pydantic
 python-dotenv
+langchain-groq
