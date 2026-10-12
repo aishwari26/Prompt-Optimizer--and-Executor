@@ -1,10 +1,9 @@
 streamlit
 langchain
-groq
+langchain-groq
+python-dotenv
+pydantic
 presidio-analyzer
 presidio-anonymizer
-spacy
-pydantic
-python-dotenv
-langchain-groq
-[https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl](https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl)
+spacy==3.7.4
+en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.7.1/en_core_web_lg-3.7.1-py3-none-any.whl
