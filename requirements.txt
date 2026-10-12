@@ -5,3 +5,4 @@ presidio-analyzer
 presidio-anonymizer
 spacy
 pydantic
+python-dotenv
