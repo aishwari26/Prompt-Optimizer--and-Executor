@@ -1,1 +1,7 @@
-
+streamlit
+langchain
+groq
+presidio-analyzer
+presidio-anonymizer
+spacy
+pydantic
